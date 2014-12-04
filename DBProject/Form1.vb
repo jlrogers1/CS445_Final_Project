@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class Form1
+Public Class EmployeeEdit
     Dim MySqlConn As MySqlConnection
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         MySqlConn = New MySqlConnection
@@ -10,7 +10,7 @@ Public Class Form1
             Dim MyTable As New DataTable()
             Dim MySqlCmd As New MySqlCommand()
             MySqlCmd.Connection = MySqlConn
-            MySqlCmd.CommandText = "SELECT * FROM Customer_T"
+            MySqlCmd.CommandText = "SELECT * FROM Employee_T"
             Dim MyAdapter As New MySqlDataAdapter(MySqlCmd)
             MyAdapter.Fill(MyTable)
             DataGridView1.DataSource = MyTable
