@@ -22,3 +22,5 @@ C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProj
 C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Debug\DBProject.xml
 C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Debug\DBProject.pdb
 C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Debug\DBProject.EmployeeEdit.resources
+C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Debug\DBProject.vbprojResolveAssemblyReference.cache
+C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Debug\DBProject.EmployeeDetails.resources

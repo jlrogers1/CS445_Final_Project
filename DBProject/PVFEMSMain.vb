@@ -60,4 +60,60 @@ Public Class EmployeeEdit
             MySqlConn.Dispose()
         End Try
     End Sub
+
+    Private Sub EmployeeDataGridView1_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles EmployeeDataGridView1.CellDoubleClick
+        Try
+            Dim EmployeeDetailsForm As New EmployeeDetails()
+            Try
+                EmployeeDetailsForm.TextBoxEmpId.Text = sender.CurrentRow.Cells(0).Value
+            Catch
+                EmployeeDetailsForm.TextBoxEmpId.Text = "NULL"
+            End Try
+            Try
+                EmployeeDetailsForm.TextBoxEmpName.Text = sender.CurrentRow.Cells(1).Value
+            Catch
+                EmployeeDetailsForm.TextBoxEmpName.Text = "NULL"
+            End Try
+            Try
+                EmployeeDetailsForm.TextBoxEmpAddr.Text = sender.CurrentRow.Cells(2).Value
+            Catch
+                EmployeeDetailsForm.TextBoxEmpAddr.Text = "NULL"
+            End Try
+            Try
+                EmployeeDetailsForm.TextBoxEmpCity.Text = sender.CurrentRow.Cells(3).Value.ToString
+            Catch
+                EmployeeDetailsForm.TextBoxEmpCity.Text = "NULL"
+            End Try
+            Try
+                EmployeeDetailsForm.TextBoxEmpState.Text = sender.CurrentRow.Cells(4).Value.ToString
+            Catch
+                EmployeeDetailsForm.TextBoxEmpState.Text = "NULL"
+            End Try
+            Try
+                EmployeeDetailsForm.TextBoxEmpZip.Text = sender.CurrentRow.Cells(5).Value.ToString
+            Catch
+                EmployeeDetailsForm.TextBoxEmpZip.Text = "NULL"
+            End Try
+            Try
+                EmployeeDetailsForm.TextBoxEmpBirth.Text = sender.CurrentRow.Cells(6).value
+            Catch
+                EmployeeDetailsForm.TextBoxEmpBirth.Text = "01/01/1753"
+                MessageBox.Show("An error occured: employee's birth date, setting to default 01/01/1753")
+            End Try
+            Try
+                EmployeeDetailsForm.TextBoxEmpHired.Text = sender.CurrentRow.Cells(7).value
+            Catch
+                EmployeeDetailsForm.TextBoxEmpHired.Text = "01/01/1753"
+                MessageBox.Show("An error occured: employee's hire date, setting to default 01/01/1753")
+            End Try
+            Try
+                EmployeeDetailsForm.TextBoxEmpSuperID.Text = sender.CurrentRow.Cells(8).Value.ToString
+            Catch
+                EmployeeDetailsForm.TextBoxEmpSuperID.Text = "NULL"
+            End Try
+            EmployeeDetailsForm.Show()
+        Catch
+            MessageBox.Show("An error occured when trying to view this employee")
+        End Try
+    End Sub
 End Class

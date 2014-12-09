@@ -1,0 +1,12 @@
+C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\bin\Release\DBProject.exe.config
+C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\bin\Release\DBProject.exe
+C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\bin\Release\DBProject.pdb
+C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\bin\Release\DBProject.xml
+C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Release\DBProject.EmployeeDetails.resources
+C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Release\DBProject.EmployeeEdit.resources
+C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Release\DBProject.Resources.resources
+C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Release\DBProject.vbproj.GenerateResource.Cache
+C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Release\DBProject.exe
+C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Release\DBProject.xml
+C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Release\DBProject.pdb
+C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Release\DBProject.vbprojResolveAssemblyReference.cache
