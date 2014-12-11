@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class WorksInDetails
+Public Class EmployeeSkillsDetails
 
-    Private Sub WorksInDetails_Close(sender As Object, e As EventArgs) Handles MyBase.FormClosed
+    Private Sub EmployeeSkillsDetails_Close(sender As Object, e As EventArgs) Handles MyBase.FormClosed
         Dim MySqlConn As MySqlConnection
         MySqlConn = New MySqlConnection
         MySqlConn.ConnectionString = "server=isoptera.lcsc.edu;port=3306;userid=CS;password=cs445;database=cs445"
@@ -9,14 +9,14 @@ Public Class WorksInDetails
             MySqlConn.Open()
             Dim MySqlCmd As New MySqlCommand()
             MySqlCmd.Connection = MySqlConn
-            Try 'SELECT ALL LOCATIONS EMPLOYEES WORK
-                MySqlCmd.CommandText = "SELECT * FROM `cs445`.`WorksIn_T`"
-                Dim WorksInAdapter As New MySqlDataAdapter(MySqlCmd)
-                Dim WorksInTable As New DataTable()
-                WorksInAdapter.Fill(WorksInTable)
-                EmployeeEdit.WorksInDataGridView1.DataSource = WorksInTable
-                WorksInTable.Dispose()
-                WorksInAdapter.Dispose()
+            Try 'SELECT ALL EMPLOYEES CERTS
+                MySqlCmd.CommandText = "SELECT * FROM `cs445`.`EmployeeSkills_T`"
+                Dim EmployeeSkillsAdapter As New MySqlDataAdapter(MySqlCmd)
+                Dim EmployeeSkillsTable As New DataTable()
+                EmployeeSkillsAdapter.Fill(EmployeeSkillsTable)
+                EmployeeEdit.EmployeeSkillsDataGridView1.DataSource = EmployeeSkillsTable
+                EmployeeSkillsTable.Dispose()
+                EmployeeSkillsAdapter.Dispose()
             Catch exError As MySqlException
                 MsgBox("An Error Occurred. " & exError.Number & " – " & exError.Message)
             End Try
@@ -38,7 +38,7 @@ Public Class WorksInDetails
                     MySqlConn.Open()
                     Dim MySqlCmd As New MySqlCommand()
                     MySqlCmd.Connection = MySqlConn
-                    MySqlCmd.CommandText = "DELETE FROM `cs445`.`WorksIn_T` WHERE `EmployeeID`='" + ComboBoxEmpId.SelectedValue + "' AND `WorkCenterID` ='" + ComboBoxWorkCenterId.SelectedValue + "'"
+                    MySqlCmd.CommandText = "DELETE FROM `cs445`.`EmployeeSkills_T` WHERE `EmployeeID`='" + ComboBoxEmpId.SelectedValue + "' AND `SkillID` ='" + ComboBoxSkillId.SelectedValue + "'"
                     MySqlCmd.ExecuteNonQuery()
                     MySqlCmd.Dispose()
                 Catch exError As MySqlException
@@ -52,7 +52,7 @@ Public Class WorksInDetails
                     MySqlConn.Open()
                     Dim MySqlCmd As New MySqlCommand()
                     MySqlCmd.Connection = MySqlConn
-                    MySqlCmd.CommandText = "INSERT INTO `cs445`.`WorksIn_T` (`EmployeeID`, `WorkCenterID`) VALUES ('" + ComboBoxEmpId.SelectedValue + "','" + ComboBoxWorkCenterId.SelectedValue + "')"
+                    MySqlCmd.CommandText = "INSERT INTO `cs445`.`EmployeeSkills_T` (`EmployeeID`, `SkillID`, `QualifyDate`) VALUES ('" + ComboBoxEmpId.SelectedValue + "','" + ComboBoxSkillId.SelectedValue + "','" + TextBoxEmpCert.Text + "') ON DUPLICATE KEY UPDATE `QualifyDate`='" + TextBoxEmpCert.Text + "'"
                     MySqlCmd.ExecuteNonQuery()
                     MySqlCmd.Dispose()
                 Catch exError As MySqlException
@@ -66,7 +66,7 @@ Public Class WorksInDetails
         Close()
     End Sub
 
-    Private Sub WorksInDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub EmployeeSkillsDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim MySqlConn As MySqlConnection
         MySqlConn = New MySqlConnection
         MySqlConn.ConnectionString = "server=isoptera.lcsc.edu;port=3306;userid=CS;password=cs445;database=cs445"
@@ -89,16 +89,16 @@ Public Class WorksInDetails
                 MsgBox("An Error Occurred. " & exError.Number & " – " & exError.Message)
             End Try
             Try 'SELECT ALL WORK LOCATIONS
-                MySqlCmd.CommandText = "SELECT `WorkCenterLocation`, `WorkCenterID` FROM `cs445`.`WorkCenter_T`"
-                Dim WorkCenterAdapter As New MySqlDataAdapter(MySqlCmd)
-                Dim WorkCenterTable As New DataTable()
-                WorkCenterAdapter.Fill(WorkCenterTable)
-                If WorkCenterTable.Rows.Count > 0 Then
-                    ComboBoxWorkCenterId.DataSource = WorkCenterTable
-                    ComboBoxWorkCenterId.DisplayMember = "NAME"
-                    ComboBoxWorkCenterId.ValueMember = "WorkCenterID"
+                MySqlCmd.CommandText = "SELECT CONCAT(`SkillID`,': ',`SkillDescription`) AS `NAME`, `SkillID` FROM `cs445`.`Skill_T`"
+                Dim SkillAdapter As New MySqlDataAdapter(MySqlCmd)
+                Dim SkillTable As New DataTable()
+                SkillAdapter.Fill(SkillTable)
+                If SkillTable.Rows.Count > 0 Then
+                    ComboBoxSkillId.DataSource = SkillTable
+                    ComboBoxSkillId.DisplayMember = "NAME"
+                    ComboBoxSkillId.ValueMember = "SkillID"
                 End If
-                WorkCenterAdapter.Dispose()
+                SkillAdapter.Dispose()
             Catch exError As MySqlException
                 MsgBox("An Error Occurred. " & exError.Number & " – " & exError.Message)
             End Try

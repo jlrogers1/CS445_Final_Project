@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class WorksInDetails
+Partial Class EmployeeSkillsDetails
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -30,7 +30,9 @@ Partial Class WorksInDetails
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.ComboBoxEmpId = New System.Windows.Forms.ComboBox()
         Me.MyApplicationBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ComboBoxWorkCenterId = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxSkillId = New System.Windows.Forms.ComboBox()
+        Me.TextBoxEmpCert = New System.Windows.Forms.DateTimePicker()
+        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.MyApplicationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -39,9 +41,9 @@ Partial Class WorksInDetails
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(255, 9)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(77, 13)
+        Me.Label8.Size = New System.Drawing.Size(40, 13)
         Me.Label8.TabIndex = 8
-        Me.Label8.Text = "Workcenter ID"
+        Me.Label8.Text = "Skill ID"
         '
         'Label9
         '
@@ -54,7 +56,7 @@ Partial Class WorksInDetails
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(258, 32)
+        Me.Button1.Location = New System.Drawing.Point(257, 58)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 10
@@ -64,7 +66,7 @@ Partial Class WorksInDetails
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(147, 32)
+        Me.CheckBox1.Location = New System.Drawing.Point(147, 62)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(105, 17)
         Me.CheckBox1.TabIndex = 9
@@ -74,7 +76,7 @@ Partial Class WorksInDetails
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(12, 32)
+        Me.CheckBox2.Location = New System.Drawing.Point(12, 62)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(132, 17)
         Me.CheckBox2.TabIndex = 14
@@ -94,28 +96,50 @@ Partial Class WorksInDetails
         '
         Me.MyApplicationBindingSource.DataSource = GetType(DBProject.My.MyApplication)
         '
-        'ComboBoxWorkCenterId
+        'ComboBoxSkillId
         '
-        Me.ComboBoxWorkCenterId.FormattingEnabled = True
-        Me.ComboBoxWorkCenterId.Location = New System.Drawing.Point(338, 6)
-        Me.ComboBoxWorkCenterId.MaxLength = 12
-        Me.ComboBoxWorkCenterId.Name = "ComboBoxWorkCenterId"
-        Me.ComboBoxWorkCenterId.Size = New System.Drawing.Size(154, 21)
-        Me.ComboBoxWorkCenterId.TabIndex = 17
+        Me.ComboBoxSkillId.FormattingEnabled = True
+        Me.ComboBoxSkillId.Location = New System.Drawing.Point(301, 6)
+        Me.ComboBoxSkillId.MaxLength = 12
+        Me.ComboBoxSkillId.Name = "ComboBoxSkillId"
+        Me.ComboBoxSkillId.Size = New System.Drawing.Size(111, 21)
+        Me.ComboBoxSkillId.TabIndex = 17
         '
-        'WorksInDetails
+        'TextBoxEmpCert
+        '
+        Me.TextBoxEmpCert.CustomFormat = "yyyy/MM/dd"
+        Me.TextBoxEmpCert.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBoxEmpCert.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.TextBoxEmpCert.Location = New System.Drawing.Point(147, 33)
+        Me.TextBoxEmpCert.Name = "TextBoxEmpCert"
+        Me.TextBoxEmpCert.Size = New System.Drawing.Size(105, 20)
+        Me.TextBoxEmpCert.TabIndex = 20
+        Me.TextBoxEmpCert.Value = New Date(1753, 1, 1, 0, 0, 0, 0)
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(12, 36)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(133, 13)
+        Me.Label7.TabIndex = 18
+        Me.Label7.Text = "Cert Date (YYYY/MM/DD)"
+        '
+        'EmployeeSkillsDetails
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(504, 60)
-        Me.Controls.Add(Me.ComboBoxWorkCenterId)
+        Me.ClientSize = New System.Drawing.Size(424, 87)
+        Me.Controls.Add(Me.TextBoxEmpCert)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.ComboBoxSkillId)
         Me.Controls.Add(Me.ComboBoxEmpId)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label9)
-        Me.Name = "WorksInDetails"
+        Me.Name = "EmployeeSkillsDetails"
         Me.Text = "Workplace Details"
         CType(Me.MyApplicationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -129,5 +153,7 @@ Partial Class WorksInDetails
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
     Friend WithEvents ComboBoxEmpId As System.Windows.Forms.ComboBox
     Friend WithEvents MyApplicationBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents ComboBoxWorkCenterId As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBoxSkillId As System.Windows.Forms.ComboBox
+    Friend WithEvents TextBoxEmpCert As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label7 As System.Windows.Forms.Label
 End Class

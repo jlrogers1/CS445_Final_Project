@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class EmployeeDetails
+Public Class SkillDetails
 
-    Private Sub EmployeeDetails_Close(sender As Object, e As EventArgs) Handles MyBase.FormClosed
+    Private Sub WorksCenterDetails_Close(sender As Object, e As EventArgs) Handles MyBase.FormClosed
         Dim MySqlConn As MySqlConnection
         MySqlConn = New MySqlConnection
         MySqlConn.ConnectionString = "server=isoptera.lcsc.edu;port=3306;userid=CS;password=cs445;database=cs445"
@@ -9,14 +9,14 @@ Public Class EmployeeDetails
             MySqlConn.Open()
             Dim MySqlCmd As New MySqlCommand()
             MySqlCmd.Connection = MySqlConn
-            Try 'SELECT ALL EMPLOYEES
-                MySqlCmd.CommandText = "SELECT * FROM `cs445`.`Employee_T`"
-                Dim EmployeeAdapter As New MySqlDataAdapter(MySqlCmd)
-                Dim EmployeeTable As New DataTable()
-                EmployeeAdapter.Fill(EmployeeTable)
-                EmployeeEdit.EmployeeDataGridView1.DataSource = EmployeeTable
-                EmployeeTable.Dispose()
-                EmployeeAdapter.Dispose()
+            Try 'SELECT ALL SKILLS
+                MySqlCmd.CommandText = "SELECT * FROM `cs445`.`Skill_T`"
+                Dim SkillAdapter As New MySqlDataAdapter(MySqlCmd)
+                Dim SkillTable As New DataTable()
+                SkillAdapter.Fill(SkillTable)
+                EmployeeEdit.SkillDataGridView1.DataSource = SkillTable
+                SkillTable.Dispose()
+                SkillAdapter.Dispose()
             Catch exError As MySqlException
                 MsgBox("An Error Occurred. " & exError.Number & " – " & exError.Message)
             End Try
@@ -38,7 +38,7 @@ Public Class EmployeeDetails
                     MySqlConn.Open()
                     Dim MySqlCmd As New MySqlCommand()
                     MySqlCmd.Connection = MySqlConn
-                    MySqlCmd.CommandText = "DELETE FROM `cs445`.`Employee_T` WHERE `EmployeeID`='" + TextBoxEmpId.Text + "'"
+                    MySqlCmd.CommandText = "DELETE FROM `cs445`.`Skill_T` WHERE `SkillID`='" + TextBoxSkillId.Text + "'"
                     MySqlCmd.ExecuteNonQuery()
                     MySqlCmd.Dispose()
                 Catch exError As MySqlException
@@ -52,7 +52,7 @@ Public Class EmployeeDetails
                     MySqlConn.Open()
                     Dim MySqlCmd As New MySqlCommand()
                     MySqlCmd.Connection = MySqlConn
-                    MySqlCmd.CommandText = "INSERT INTO `cs445`.`Employee_T` (`EmployeeID`, `EmployeeName`, `EmployeeAddress`, `EmployeeCity`, `EmployeeState`, `EmployeeZip`, `EmployeeBirthDate`, `EmployeeDateHired`, `EmployeeSupervisor`) VALUES ('" + TextBoxEmpId.Text + "','" + TextBoxEmpName.Text + "','" + TextBoxEmpAddr.Text + "','" + TextBoxEmpCity.Text + "','" + TextBoxEmpState.Text + "','" + TextBoxEmpZip.Text + "','" + TextBoxEmpBirth.Text + "','" + TextBoxEmpHired.Text + "','" + TextBoxEmpSuperID.Text + "') ON DUPLICATE KEY UPDATE `EmployeeName`='" + TextBoxEmpName.Text + "', `EmployeeAddress`='" + TextBoxEmpAddr.Text + "', `EmployeeCity`='" + TextBoxEmpCity.Text + "', `EmployeeState`='" + TextBoxEmpState.Text + "', `EmployeeZip`='" + TextBoxEmpZip.Text + "', `EmployeeBirthDate`='" + TextBoxEmpBirth.Text + "', `EmployeeDateHired`='" + TextBoxEmpHired.Text + "', `EmployeeSupervisor`='" + TextBoxEmpSuperID.Text + "'"
+                    MySqlCmd.CommandText = "INSERT INTO `cs445`.`Skill_T` (`SkillID`, `SkillDescription`) VALUES ('" + TextBoxSkillId.Text + "','" + TextBoxSkillDesc.Text + "') ON DUPLICATE KEY UPDATE `SkillDescription`='" + TextBoxSkillDesc.Text + "'"
                     MySqlCmd.ExecuteNonQuery()
                     MySqlCmd.Dispose()
                 Catch exError As MySqlException

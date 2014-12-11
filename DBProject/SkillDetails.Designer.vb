@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class WorksInDetails
+Partial Class SkillDetails
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -28,29 +28,29 @@ Partial Class WorksInDetails
         Me.Button1 = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.ComboBoxEmpId = New System.Windows.Forms.ComboBox()
         Me.MyApplicationBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ComboBoxWorkCenterId = New System.Windows.Forms.ComboBox()
+        Me.TextBoxSkillId = New System.Windows.Forms.TextBox()
+        Me.TextBoxSkillDesc = New System.Windows.Forms.TextBox()
         CType(Me.MyApplicationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(255, 9)
+        Me.Label8.Location = New System.Drawing.Point(164, 9)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(77, 13)
+        Me.Label8.Size = New System.Drawing.Size(60, 13)
         Me.Label8.TabIndex = 8
-        Me.Label8.Text = "Workcenter ID"
+        Me.Label8.Text = "Description"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(12, 9)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(67, 13)
+        Me.Label9.Size = New System.Drawing.Size(40, 13)
         Me.Label9.TabIndex = 7
-        Me.Label9.Text = "Employee ID"
+        Me.Label9.Text = "Skill ID"
         '
         'Button1
         '
@@ -76,46 +76,44 @@ Partial Class WorksInDetails
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Location = New System.Drawing.Point(12, 32)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(132, 17)
+        Me.CheckBox2.Size = New System.Drawing.Size(68, 17)
         Me.CheckBox2.TabIndex = 14
-        Me.CheckBox2.Text = "DELETE EMP FR WP"
+        Me.CheckBox2.Text = "DELETE"
         Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'ComboBoxEmpId
-        '
-        Me.ComboBoxEmpId.FormattingEnabled = True
-        Me.ComboBoxEmpId.Location = New System.Drawing.Point(85, 6)
-        Me.ComboBoxEmpId.MaxLength = 10
-        Me.ComboBoxEmpId.Name = "ComboBoxEmpId"
-        Me.ComboBoxEmpId.Size = New System.Drawing.Size(167, 21)
-        Me.ComboBoxEmpId.TabIndex = 16
         '
         'MyApplicationBindingSource
         '
         Me.MyApplicationBindingSource.DataSource = GetType(DBProject.My.MyApplication)
         '
-        'ComboBoxWorkCenterId
+        'TextBoxSkillId
         '
-        Me.ComboBoxWorkCenterId.FormattingEnabled = True
-        Me.ComboBoxWorkCenterId.Location = New System.Drawing.Point(338, 6)
-        Me.ComboBoxWorkCenterId.MaxLength = 12
-        Me.ComboBoxWorkCenterId.Name = "ComboBoxWorkCenterId"
-        Me.ComboBoxWorkCenterId.Size = New System.Drawing.Size(154, 21)
-        Me.ComboBoxWorkCenterId.TabIndex = 17
+        Me.TextBoxSkillId.Location = New System.Drawing.Point(58, 6)
+        Me.TextBoxSkillId.MaxLength = 12
+        Me.TextBoxSkillId.Name = "TextBoxSkillId"
+        Me.TextBoxSkillId.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxSkillId.TabIndex = 15
         '
-        'WorksInDetails
+        'TextBoxSkillDesc
+        '
+        Me.TextBoxSkillDesc.Location = New System.Drawing.Point(230, 6)
+        Me.TextBoxSkillDesc.MaxLength = 30
+        Me.TextBoxSkillDesc.Name = "TextBoxSkillDesc"
+        Me.TextBoxSkillDesc.Size = New System.Drawing.Size(262, 20)
+        Me.TextBoxSkillDesc.TabIndex = 16
+        '
+        'SkillsDetails
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(504, 60)
-        Me.Controls.Add(Me.ComboBoxWorkCenterId)
-        Me.Controls.Add(Me.ComboBoxEmpId)
+        Me.Controls.Add(Me.TextBoxSkillDesc)
+        Me.Controls.Add(Me.TextBoxSkillId)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label9)
-        Me.Name = "WorksInDetails"
+        Me.Name = "SkillsDetails"
         Me.Text = "Workplace Details"
         CType(Me.MyApplicationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -127,7 +125,7 @@ Partial Class WorksInDetails
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
-    Friend WithEvents ComboBoxEmpId As System.Windows.Forms.ComboBox
     Friend WithEvents MyApplicationBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents ComboBoxWorkCenterId As System.Windows.Forms.ComboBox
+    Friend WithEvents TextBoxSkillId As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxSkillDesc As System.Windows.Forms.TextBox
 End Class

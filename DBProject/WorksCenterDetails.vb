@@ -10,7 +10,7 @@ Public Class WorksCenterDetails
             Dim MySqlCmd As New MySqlCommand()
             MySqlCmd.Connection = MySqlConn
             Try 'SELECT ALL LOCATIONS EMPLOYEES WORK
-                MySqlCmd.CommandText = "SELECT * FROM WorkCenter_T"
+                MySqlCmd.CommandText = "SELECT * FROM `cs445`.`WorkCenter_T`"
                 Dim WorksCenterAdapter As New MySqlDataAdapter(MySqlCmd)
                 Dim WorksCenterTable As New DataTable()
                 WorksCenterAdapter.Fill(WorksCenterTable)
