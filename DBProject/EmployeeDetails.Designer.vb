@@ -206,6 +206,7 @@ Partial Class EmployeeDetails
         '
         Me.TextBoxEmpBirth.CustomFormat = "yyyy/MM/dd"
         Me.TextBoxEmpBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBoxEmpBirth.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.TextBoxEmpBirth.Location = New System.Drawing.Point(149, 84)
         Me.TextBoxEmpBirth.Name = "TextBoxEmpBirth"
         Me.TextBoxEmpBirth.Size = New System.Drawing.Size(105, 20)

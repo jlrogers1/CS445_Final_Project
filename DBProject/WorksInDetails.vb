@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class EmployeeDetails
+Public Class WorksInDetails
 
     Private Sub EmployeeDetails_Close(sender As Object, e As EventArgs) Handles MyBase.FormClosed
         Dim MySqlConn As MySqlConnection
@@ -9,16 +9,16 @@ Public Class EmployeeDetails
             MySqlConn.Open()
             Dim MySqlCmd As New MySqlCommand()
             MySqlCmd.Connection = MySqlConn
-            Try 'SELECT ALL EMPLOYEES
-                MySqlCmd.CommandText = "SELECT * FROM Employee_T"
-                Dim EmployeeAdapter As New MySqlDataAdapter(MySqlCmd)
-                Dim EmployeeTable As New DataTable()
-                EmployeeAdapter.Fill(EmployeeTable)
-                EmployeeEdit.EmployeeDataGridView1.DataSource = EmployeeTable
-                EmployeeTable.Dispose()
-                EmployeeAdapter.Dispose()
+            Try 'SELECT ALL LOCATIONS EMPLOYEES WORK
+                MySqlCmd.CommandText = "SELECT * FROM WorksIn_T"
+                Dim WorksInAdapter As New MySqlDataAdapter(MySqlCmd)
+                Dim WorksInTable As New DataTable()
+                WorksInAdapter.Fill(WorksInTable)
+                EmployeeEdit.WorksInDataGridView1.DataSource = WorksInTable
+                WorksInTable.Dispose()
+                WorksInAdapter.Dispose()
             Catch
-                MessageBox.Show("An error occured when loading Employee_T")
+                MessageBox.Show("An error occured when loading WorksIn_T")
             End Try
         Catch ex As MySqlException
             MessageBox.Show(ex.Message)
@@ -38,7 +38,7 @@ Public Class EmployeeDetails
                     MySqlConn.Open()
                     Dim MySqlCmd As New MySqlCommand()
                     MySqlCmd.Connection = MySqlConn
-                    MySqlCmd.CommandText = "DELETE FROM `cs445`.`Employee_T` WHERE `EmployeeID`='" + TextBoxEmpId.Text + "'"
+                    MySqlCmd.CommandText = "DELETE FROM `cs445`.`WorksIn_T` WHERE `EmployeeID`='" + TextBoxEmpId.Text + "' AND `WorkCenterID` ='" + TextBoxEmpWorkCenterID.Text +"'"
                     MySqlCmd.ExecuteNonQuery()
                     MySqlCmd.Dispose()
                 Catch
@@ -52,7 +52,7 @@ Public Class EmployeeDetails
                     MySqlConn.Open()
                     Dim MySqlCmd As New MySqlCommand()
                     MySqlCmd.Connection = MySqlConn
-                    MySqlCmd.CommandText = "INSERT INTO `cs445`.`Employee_T` (`EmployeeID`, `EmployeeName`, `EmployeeAddress`, `EmployeeCity`, `EmployeeState`, `EmployeeZip`, `EmployeeBirthDate`, `EmployeeDateHired`, `EmployeeSupervisor`) VALUES ('" + TextBoxEmpId.Text + "','" + TextBoxEmpName.Text + "','" + TextBoxEmpAddr.Text + "','" + TextBoxEmpCity.Text + "','" + TextBoxEmpState.Text + "','" + TextBoxEmpZip.Text + "','" + TextBoxEmpBirth.Text + "','" + TextBoxEmpHired.Text + "','" + TextBoxEmpSuperID.Text + "') ON DUPLICATE KEY UPDATE `EmployeeName`='" + TextBoxEmpName.Text + "', `EmployeeAddress`='" + TextBoxEmpAddr.Text + "', `EmployeeCity`='" + TextBoxEmpCity.Text + "', `EmployeeState`='" + TextBoxEmpState.Text + "', `EmployeeZip`='" + TextBoxEmpZip.Text + "', `EmployeeBirthDate`='" + TextBoxEmpBirth.Text + "', `EmployeeDateHired`='" + TextBoxEmpHired.Text + "', `EmployeeSupervisor`='" + TextBoxEmpSuperID.Text + "'"
+                    MySqlCmd.CommandText = "INSERT INTO `cs445`.`WorksIn_T` (`EmployeeID`, `WorkCenterID`) VALUES ('" + TextBoxEmpId.Text + "','" + TextBoxEmpWorkCenterID.Text + "') ON DUPLICATE KEY UPDATE `WorkCenterID`='" + TextBoxEmpWorkCenterID.Text + "'"
                     MySqlCmd.ExecuteNonQuery()
                     MySqlCmd.Dispose()
                 Catch
@@ -64,5 +64,11 @@ Public Class EmployeeDetails
             End If
         End If
         Close()
+    End Sub
+
+    Private Sub WorksInDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TextBoxEmpId.DataSource = EmployeeEdit.EmployeeDataGridView1
+        'TextBoxEmpId.ValueMember = "EmployeeID"
+        'TextBoxEmpId.DisplayMember = "EmployeeName"
     End Sub
 End Class

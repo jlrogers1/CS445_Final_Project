@@ -10,3 +10,4 @@ C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProj
 C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Release\DBProject.xml
 C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Release\DBProject.pdb
 C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Release\DBProject.vbprojResolveAssemblyReference.cache
+C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Release\DBProject.WorksInDetails.resources
