@@ -42,7 +42,7 @@ Partial Class EmployeeDetails
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.TextBoxEmpBirth = New System.Windows.Forms.DateTimePicker()
         Me.TextBoxEmpHired = New System.Windows.Forms.DateTimePicker()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Label2
@@ -136,18 +136,18 @@ Partial Class EmployeeDetails
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(12, 87)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(131, 13)
+        Me.Label7.Size = New System.Drawing.Size(135, 13)
         Me.Label7.TabIndex = 5
-        Me.Label7.Text = "Birth Date (YYYY-MM-DD)"
+        Me.Label7.Text = "Birth Date (YYYY/MM/DD)"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(255, 87)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(129, 13)
+        Me.Label1.Size = New System.Drawing.Size(133, 13)
         Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Hire Date (YYYY-MM-DD)"
+        Me.Label1.Text = "Hire Date (YYYY/MM/DD)"
         '
         'TextBoxEmpSuperID
         '
@@ -204,7 +204,7 @@ Partial Class EmployeeDetails
         '
         'TextBoxEmpBirth
         '
-        Me.TextBoxEmpBirth.CustomFormat = "MM/dd/yyyy"
+        Me.TextBoxEmpBirth.CustomFormat = "yyyy/MM/dd"
         Me.TextBoxEmpBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.TextBoxEmpBirth.Location = New System.Drawing.Point(149, 84)
         Me.TextBoxEmpBirth.Name = "TextBoxEmpBirth"
@@ -214,7 +214,7 @@ Partial Class EmployeeDetails
         '
         'TextBoxEmpHired
         '
-        Me.TextBoxEmpHired.CustomFormat = "MM/dd/yyyy"
+        Me.TextBoxEmpHired.CustomFormat = "yyyy/MM/dd"
         Me.TextBoxEmpHired.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.TextBoxEmpHired.Location = New System.Drawing.Point(390, 84)
         Me.TextBoxEmpHired.Name = "TextBoxEmpHired"
@@ -222,21 +222,22 @@ Partial Class EmployeeDetails
         Me.TextBoxEmpHired.TabIndex = 13
         Me.TextBoxEmpHired.Value = New Date(1753, 1, 1, 0, 0, 0, 0)
         '
-        'MaskedTextBox1
+        'CheckBox2
         '
-        Me.MaskedTextBox1.HidePromptOnLeave = True
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(15, 143)
-        Me.MaskedTextBox1.Mask = ">L>L"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.MaskedTextBox1.TabIndex = 14
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(15, 143)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(129, 17)
+        Me.CheckBox2.TabIndex = 14
+        Me.CheckBox2.Text = "DELETE EMPLOYEE"
+        Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'EmployeeDetails
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(504, 168)
-        Me.Controls.Add(Me.MaskedTextBox1)
+        Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.TextBoxEmpHired)
         Me.Controls.Add(Me.TextBoxEmpBirth)
         Me.Controls.Add(Me.CheckBox1)
@@ -283,5 +284,5 @@ Partial Class EmployeeDetails
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents TextBoxEmpBirth As System.Windows.Forms.DateTimePicker
     Friend WithEvents TextBoxEmpHired As System.Windows.Forms.DateTimePicker
-    Friend WithEvents MaskedTextBox1 As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
 End Class

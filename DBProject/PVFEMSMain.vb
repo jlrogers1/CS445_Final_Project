@@ -68,50 +68,57 @@ Public Class EmployeeEdit
                 EmployeeDetailsForm.TextBoxEmpId.Text = sender.CurrentRow.Cells(0).Value
             Catch
                 EmployeeDetailsForm.TextBoxEmpId.Text = "NULL"
+                MessageBox.Show("An error occured: emp id")
             End Try
             Try
                 EmployeeDetailsForm.TextBoxEmpName.Text = sender.CurrentRow.Cells(1).Value
             Catch
                 EmployeeDetailsForm.TextBoxEmpName.Text = "NULL"
+                MessageBox.Show("An error occured: name")
             End Try
             Try
                 EmployeeDetailsForm.TextBoxEmpAddr.Text = sender.CurrentRow.Cells(2).Value
             Catch
                 EmployeeDetailsForm.TextBoxEmpAddr.Text = "NULL"
+                MessageBox.Show("An error occured: address")
             End Try
             Try
-                EmployeeDetailsForm.TextBoxEmpCity.Text = sender.CurrentRow.Cells(3).Value.ToString
+                EmployeeDetailsForm.TextBoxEmpCity.Text = sender.CurrentRow.Cells(3).Value
             Catch
                 EmployeeDetailsForm.TextBoxEmpCity.Text = "NULL"
+                MessageBox.Show("An error occured: city")
             End Try
             Try
-                EmployeeDetailsForm.TextBoxEmpState.Text = sender.CurrentRow.Cells(4).Value.ToString
+                EmployeeDetailsForm.TextBoxEmpState.Text = sender.CurrentRow.Cells(4).Value
             Catch
                 EmployeeDetailsForm.TextBoxEmpState.Text = "NULL"
+                MessageBox.Show("An error occured: state")
             End Try
             Try
-                EmployeeDetailsForm.TextBoxEmpZip.Text = sender.CurrentRow.Cells(5).Value.ToString
+                EmployeeDetailsForm.TextBoxEmpZip.Text = sender.CurrentRow.Cells(5).Value
             Catch
                 EmployeeDetailsForm.TextBoxEmpZip.Text = "NULL"
+                MessageBox.Show("An error occured: zip code")
             End Try
             Try
-                EmployeeDetailsForm.TextBoxEmpBirth.Text = sender.CurrentRow.Cells(6).value
+                EmployeeDetailsForm.TextBoxEmpBirth.Text = sender.CurrentRow.Cells(6).Value
             Catch
                 EmployeeDetailsForm.TextBoxEmpBirth.Text = "01/01/1753"
-                MessageBox.Show("An error occured: employee's birth date, setting to default 01/01/1753")
+                MessageBox.Show("An error occured: birth date, setting to default 01/01/1753")
             End Try
             Try
-                EmployeeDetailsForm.TextBoxEmpHired.Text = sender.CurrentRow.Cells(7).value
+                EmployeeDetailsForm.TextBoxEmpHired.Text = sender.CurrentRow.Cells(7).Value
             Catch
                 EmployeeDetailsForm.TextBoxEmpHired.Text = "01/01/1753"
-                MessageBox.Show("An error occured: employee's hire date, setting to default 01/01/1753")
+                MessageBox.Show("An error occured: hire date, setting to default 01/01/1753")
             End Try
             Try
-                EmployeeDetailsForm.TextBoxEmpSuperID.Text = sender.CurrentRow.Cells(8).Value.ToString
+                EmployeeDetailsForm.TextBoxEmpSuperID.Text = sender.CurrentRow.Cells(8).Value
             Catch
                 EmployeeDetailsForm.TextBoxEmpSuperID.Text = "NULL"
+                MessageBox.Show("An error occured: supervisor id")
             End Try
-            EmployeeDetailsForm.Show()
+            EmployeeDetailsForm.ShowDialog()
         Catch
             MessageBox.Show("An error occured when trying to view this employee")
         End Try

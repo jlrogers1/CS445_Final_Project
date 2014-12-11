@@ -62,7 +62,6 @@ Partial Class EmployeeEdit
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -86,7 +85,7 @@ Partial Class EmployeeEdit
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(594, 301)
+        Me.TabPage2.Size = New System.Drawing.Size(776, 535)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Work Location"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -102,7 +101,7 @@ Partial Class EmployeeEdit
         Me.WorksInDataGridView1.Name = "WorksInDataGridView1"
         Me.WorksInDataGridView1.ReadOnly = True
         Me.WorksInDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.WorksInDataGridView1.Size = New System.Drawing.Size(588, 295)
+        Me.WorksInDataGridView1.Size = New System.Drawing.Size(770, 529)
         Me.WorksInDataGridView1.TabIndex = 2
         '
         'TabPage3
@@ -111,7 +110,7 @@ Partial Class EmployeeEdit
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(594, 301)
+        Me.TabPage3.Size = New System.Drawing.Size(776, 535)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Emp Skills"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -127,7 +126,7 @@ Partial Class EmployeeEdit
         Me.EmployeeSkillsDataGridView1.Name = "EmployeeSkillsDataGridView1"
         Me.EmployeeSkillsDataGridView1.ReadOnly = True
         Me.EmployeeSkillsDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.EmployeeSkillsDataGridView1.Size = New System.Drawing.Size(588, 295)
+        Me.EmployeeSkillsDataGridView1.Size = New System.Drawing.Size(770, 529)
         Me.EmployeeSkillsDataGridView1.TabIndex = 3
         '
         'TabPage4
@@ -136,7 +135,7 @@ Partial Class EmployeeEdit
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(594, 301)
+        Me.TabPage4.Size = New System.Drawing.Size(776, 535)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Skills"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -152,7 +151,7 @@ Partial Class EmployeeEdit
         Me.SkillDataGridView1.Name = "SkillDataGridView1"
         Me.SkillDataGridView1.ReadOnly = True
         Me.SkillDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.SkillDataGridView1.Size = New System.Drawing.Size(588, 295)
+        Me.SkillDataGridView1.Size = New System.Drawing.Size(770, 529)
         Me.SkillDataGridView1.TabIndex = 3
         '
         'EmployeeEdit
