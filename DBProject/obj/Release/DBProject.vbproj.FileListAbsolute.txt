@@ -13,3 +13,4 @@ C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProj
 C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Release\DBProject.WorksCenterDetails.resources
 C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Release\DBProject.SkillDetails.resources
 C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Release\DBProject.EmployeeSkillsDetails.resources
+C:\Users\Joshua\Documents\Visual Studio 2013\Projects\CS445_Final_Project\DBProject\obj\Release\DBProject.auth.resources

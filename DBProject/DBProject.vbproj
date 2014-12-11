@@ -71,6 +71,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="auth.designer.vb">
+      <DependentUpon>auth.vb</DependentUpon>
+    </Compile>
+    <Compile Include="auth.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SkillDetails.Designer.vb">
       <DependentUpon>SkillDetails.vb</DependentUpon>
     </Compile>
@@ -125,6 +131,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="auth.resx">
+      <DependentUpon>auth.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SkillDetails.resx">
       <DependentUpon>SkillDetails.vb</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +173,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="My Project\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext1836750849.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext1836774822.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\harbor-ship-sea-mast-water-pirate-boat-sailboat.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -15,6 +15,18 @@ DBProject
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:DBProject.My.Resources.Resources.cooltext1836750849">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:DBProject.My.Resources.Resources.cooltext1836774822">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:DBProject.My.Resources.Resources.harbor_ship_sea_mast_water_pirate_boat_sailboat">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="T:DBProject.My.Resources.Resources">
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
