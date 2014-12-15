@@ -20,9 +20,9 @@ Public Class auth
             Try
                 If Authenticated = True Then
                     Try
-                        Dim PVFMain As New EmployeeEdit()
+                        Dim EmployeeEdit As New EmployeeEdit()
                         Me.Hide()
-                        PVFMain.Show()
+                        EmployeeEdit.Show()
                     Catch
                         MsgBox("An Error Occurred.")
                     End Try
